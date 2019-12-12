@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1429A0E4-1E27-48C8-8299-A798FED91714}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TobbbformosPizzaAlkalmazasTobbTabla</RootNamespace>
+    <AssemblyName>TobbbformosPizzaAlkalmazasTobbTabla</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormPizzas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTestData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPizzaFutarKft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPizzaFutarKft.Designer.cs">
+      <DependentUpon>FormPizzaFutarKft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="model\ConnectionString.cs" />
+    <Compile Include="model\Courier.cs" />
+    <Compile Include="model\CourierDatabase.cs" />
+    <Compile Include="model\CustomerDatabase.cs" />
+    <Compile Include="model\Customer.cs" />
+    <Compile Include="model\ModelExeption.cs" />
+    <Compile Include="model\ModelFutarNotValidNameExeption.cs" />
+    <Compile Include="model\ModelMegrendeloNotValidNameExeption.cs" />
+    <Compile Include="model\ModelPizzaNotValidNameExeption.cs" />
+    <Compile Include="model\Item.cs" />
+    <Compile Include="model\ItemDatabase.cs" />
+    <Compile Include="model\OrderDatabase.cs" />
+    <Compile Include="model\Order.cs" />
+    <Compile Include="model\Pizza.cs" />
+    <Compile Include="model\PizzaDatabase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="repository\Courier\RepositoryCurier.cs" />
+    <Compile Include="repository\Courier\RepositoryDatabaseTableCurier.cs" />
+    <Compile Include="repository\Courier\RepositoryDatabaseTableCurierSQL.cs" />
+    <Compile Include="repository\Courier\RepositoryDatabaseTableCurierTestData.cs" />
+    <Compile Include="repository\Customer\RepositoryCustomer.cs" />
+    <Compile Include="repository\Customer\RepositoryDatabaseTableCustomer.cs" />
+    <Compile Include="repository\Customer\RepositoryDatabaseTableCustomerTestData.cs" />
+    <Compile Include="repository\Customer\RepositoryDatabaseTableCustomerSQL.cs" />
+    <Compile Include="repository\Item\RepositoryDatabaseTableItem.cs" />
+    <Compile Include="repository\Item\RepositoryDatabaseTableItemSQL.cs" />
+    <Compile Include="repository\Item\RepositoryDatabaseTableItemTestData.cs" />
+    <Compile Include="repository\Item\RepositoryItem.cs" />
+    <Compile Include="repository\Order\RepositoryDatabaseTableOrder.cs" />
+    <Compile Include="repository\Order\RepositoryDatabaseTableOrderSQL.cs" />
+    <Compile Include="repository\Order\RepositoryDatabaseTableOrderTestData.cs" />
+    <Compile Include="repository\Order\RepositoryOrder.cs" />
+    <Compile Include="repository\Repository.cs" />
+    <Compile Include="repository\RepositoryException.cs" />
+    <Compile Include="repository\RepositoryExceptionCantAdd.cs" />
+    <Compile Include="repository\RepositoryExceptionCantDelete.cs" />
+    <Compile Include="repository\RepositoryExceptionCantModified.cs" />
+    <Compile Include="repository\Pizza\RepositoryPizza.cs" />
+    <Compile Include="repository\RepositoryDatabase.cs" />
+    <Compile Include="repository\Pizza\RepositoryDatabaseTablePizza.cs" />
+    <Compile Include="repository\Pizza\RepositoryDatabaseTablePizzaSQL.cs" />
+    <Compile Include="repository\Pizza\RepositoryDatabaseTablePizzaTestData.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="diagram\RepositoryDatabasePizza.cd" />
+    <None Include="diagram\ModellRepoPizza.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\Load-icon.png" />
+    <Content Include="icons\Save-icon.png" />
+    <Content Include="icons\Tools-icon.png" />
+    <Content Include="sql\pizza.sql" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
