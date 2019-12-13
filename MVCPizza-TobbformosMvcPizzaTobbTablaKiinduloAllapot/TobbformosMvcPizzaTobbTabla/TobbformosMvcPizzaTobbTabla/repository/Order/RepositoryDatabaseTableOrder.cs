@@ -34,7 +34,8 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
                     "`vazon` int(6) NOT NULL DEFAULT '0',"+
                     "`fazon` int(3) NOT NULL DEFAULT '0',"+
                     "`datum` date NOT NULL DEFAULT '2017-01-01',"+
-                    "`ido` float NOT NULL DEFAULT '0'"+
+                    "`ido` float NOT NULL DEFAULT '0',"+
+                    "`teljesites` tinyint(1) NOT NULL DEFAULT '0'"+
                 ") ENGINE = MyISAM DEFAULT CHARSET = latin2 COLLATE = latin2_hungarian_ci; ";
 
             string queryPrimaryKey = "ALTER TABLE `prendeles`  ADD PRIMARY KEY(`razon`); ";

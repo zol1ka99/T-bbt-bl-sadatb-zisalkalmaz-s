@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TobbbformosPizzaAlkalmazasTobbTabla.Model;
-using MySql.Data.MySqlClient;
+
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
 {
