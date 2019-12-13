@@ -46,5 +46,7 @@ namespace TobbformosMvcPizzaTobbTabla
         {
             tabControlPizzaFutarKFT.SelectTab("tabPageSzamlak");
         }
+
+        
     }
 }
