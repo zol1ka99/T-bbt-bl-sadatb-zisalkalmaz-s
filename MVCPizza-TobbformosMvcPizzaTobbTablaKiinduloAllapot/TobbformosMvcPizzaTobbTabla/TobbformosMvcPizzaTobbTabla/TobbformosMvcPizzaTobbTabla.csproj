@@ -102,6 +102,9 @@
     <Compile Include="repository\Pizza\RepositoryDatabaseTablePizza.cs" />
     <Compile Include="repository\Pizza\RepositoryDatabaseTablePizzaSQL.cs" />
     <Compile Include="repository\Pizza\RepositoryDatabaseTablePizzaTestData.cs" />
+    <EmbeddedResource Include="FormPizzaFutarKft.resx">
+      <DependentUpon>FormPizzaFutarKft.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

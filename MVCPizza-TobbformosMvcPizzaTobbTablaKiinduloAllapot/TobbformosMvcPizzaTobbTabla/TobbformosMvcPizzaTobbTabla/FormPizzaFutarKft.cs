@@ -41,5 +41,10 @@ namespace TobbformosMvcPizzaTobbTabla
         {
             tabControlPizzaFutarKFT.SelectTab("tabPagePizzak");
         }
+
+        private void számlákToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControlPizzaFutarKFT.SelectTab("tabPageSzamlak");
+        }
     }
 }
