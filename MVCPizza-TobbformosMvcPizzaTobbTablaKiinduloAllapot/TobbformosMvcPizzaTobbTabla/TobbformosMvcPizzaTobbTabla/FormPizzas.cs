@@ -23,16 +23,13 @@ namespace TobbformosMvcPizzaTobbTabla
         /// <summary>
         /// Tárolja a pizzákat listában
         /// </summary>
-        private Repository repo = new Repository();
+        //private Repository repo = new Repository(); //ez itt nem kell
 
         bool ujAdatfelvitel = false;
 
         private void buttonBetoltesPizzak_Click(object sender, EventArgs e)
         {
-            //Adatbázisban pizza tábla kezelése
-            RepositoryDatabaseTablePizza rtp = new RepositoryDatabaseTablePizza();
-            //A repo-ba lévő pizza listát feltölti az adatbázisból
-            repo.setPizzas(rtp.getPizzasFromDatabaseTable());
+            
             frissitAdatokkalDataGriedViewt();
             beallitPizzaDataGriViewt();
             beallitGombokatIndulaskor();            

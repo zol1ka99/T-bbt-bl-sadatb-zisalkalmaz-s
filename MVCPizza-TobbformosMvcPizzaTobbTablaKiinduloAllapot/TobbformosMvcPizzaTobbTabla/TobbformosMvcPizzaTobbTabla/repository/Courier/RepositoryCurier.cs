@@ -18,7 +18,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
             return couriers;
         }
 
-        public void setFutarok(List<Courier> futarok)
+        public void setCourier(List<Courier> futarok)
         {
             this.couriers = futarok;
         }

@@ -18,7 +18,7 @@ namespace TobbbformosPizzaAlkalmazasTobbTabla.Repository
             return items;
         }
 
-        public void setOrder(List<Item> orders)
+        public void setItem(List<Item> orders)
         {
             this.items = items;
         }
